@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=admindarti
+      - POSTGRES_PASSWORD=dartipassword
+      - POSTGRES_DB=darti_db
+    ports:
+      - "5432:5432"
+    
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+    command: npm run dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    
