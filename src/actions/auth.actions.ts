@@ -2,7 +2,7 @@
 
 //#region Importações
 import { validateCredentials } from '@/services/auth.service';
-import { createSession } from '@/lib/session';
+import { createSession, deleteSession } from '@/lib/session';
 import { redirect } from 'next/navigation';
 //#endregion
 
@@ -37,3 +37,12 @@ export async function loginAction(prevState: unknown, formData: FormData) {
 
     redirect(destination);
 }
+//#endregion
+
+
+//#region Logout Action
+export async function logoutAction() {
+    await deleteSession();
+    redirect('/login');
+}
+//#endregion

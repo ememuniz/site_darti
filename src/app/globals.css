@@ -3,6 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --blueDarti: #050066;
+  --greenDarti: #116600;
+  --orangeDarti: #E66F00;
+  --blueLightDarti: #0B00E6;
+  --brownDarti: #662500;
+  --greyDarti: #666666;
+  --greyLightDarti: #dfe0e5;
+  --darkDarti: #272727;
 }
 
 @theme inline {
@@ -10,12 +18,19 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-blueDarti: var(--blueDarti);
+  --color-greenDarti: var(--greenDarti);
+  --color-orangeDarti: var(--orangeDarti);
+  --color-blueLightDarti: var(--blueLightDarti);
+  --color-brownDarti: var(--brownDarti);
+  --color-greyDarti: var(--greyDarti);
+  --color-greyLightDarti: var(--greyLightDarti);
+  --color-darkDarti: var(--darkDarti);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    
   }
 }
 
