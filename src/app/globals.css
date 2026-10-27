@@ -11,6 +11,7 @@
   --greyDarti: #666666;
   --greyLightDarti: #dfe0e5;
   --darkDarti: #272727;
+  --redDarti: #E60000;
 }
 
 @theme inline {
@@ -26,12 +27,9 @@
   --color-greyDarti: var(--greyDarti);
   --color-greyLightDarti: var(--greyLightDarti);
   --color-darkDarti: var(--darkDarti);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    
-  }
+  --font-inter: var(--font-inter);
+  --color-redDarti: var(--redDarti);
+  --font-montserrat: var(--font-montserrat);
 }
 
 body {

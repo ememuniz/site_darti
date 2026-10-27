@@ -19,7 +19,7 @@ export default function LoginPage() {
         <main className="flex bg-greyLightDarti text-darkDarti h-screen justify-center pt-5 mt-16 border">
             <ParticleBackground />
             <div className="h-fit w-[500px]  flex flex-col justify-start items-center px-15 pt-10 pb-10">
-                <Image src={logo} alt="Logo Darti" className="object-contain px-15" />
+                <Image src={logo} alt="Logo Darti" priority className="object-contain px-15" />
                 <h1 className="font-bold text-[35pt] font-poppins text-blueDarti">Login</h1>
                 <p className="text-center text-greyDarti/80 pb-5">Entre com suas credenciais</p>
                 <form action={formAction} className="flex flex-col gap-2 w-full">

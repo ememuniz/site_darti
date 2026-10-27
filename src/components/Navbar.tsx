@@ -40,9 +40,9 @@ export default async function Navbar({
     const administrador = session?.role === 'ADMIN' ? '/admin' : (session?.role === 'STUDENT' ? '/aluno' : (session?.role === 'LEADER' ? '/lider' : (session?.role === 'MEMBER' ? '/membro' : '/login')));
 
     return (
-        <div className="flex fixed top-0 left-0 w-full z-50 shadow-md bg-blueDarti h-[65px] px-[3vh] py-[6px] items-center justify-between gap-2">
+        <div className="flex fixed top-0 left-0 w-full z-50 shadow-md bg-blueDarti h-[65px] px-[3vh] py-[6px] items-center justify-between gap-2 font-montserrat">
             <div className="h-full justify-center items-center flex py-[5px] px-[15px]">
-                <Image src={logo} alt="Logo Darti" className="h-full w-full object-contain" />               
+                <Image src={logo} alt="Logo Darti" priority className="h-full w-full object-contain" />               
             </div>
 
             <nav className="flex-8 h-full flex items-center gap-7 px-[2vw] max-[925px]:hidden text-greyLightDarti">

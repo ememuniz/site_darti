@@ -16,7 +16,9 @@ async function main() {
             name: "Administrador",
             email: "admin@darti.ufma.br",
             password: hashedPassword,
-            role: "ADMIN"
+            role: "ADMIN",
+            board: ["RECURSOS_HUMANOS", 'FINANCEIRO', 'COMUNICACAO', 'AUTOMAÇÃO_E_ROBOTICA', 'SISTEMAS_E_INTELIGENCIA', 'INOVAÇÃO_TRANSDISCIPLINAR'],
+            club: ['DES_WEB_1', 'DES_WEB_2', 'DES_WEB_3', 'HACKATHON', 'MIDIA', 'ATUALIDADES', 'VIS_COMPUTACIONAL_1', 'VIS_COMPUTACIONAL_2', 'ROBOTICA_1', 'ROBOTICA_2', 'ROBOTICA_3', 'TEC_EDUCACIONAL_1', 'TEC_EDUCACIONAL_2', 'AEROMODELISMO', 'MUSICA', 'ESCRITA_CRIATIVA', 'DNA_EM_EVIDENCIA', 'IDENTIDADE_E_TECNOLOGIA', 'PROCESSAMENTO_DE_SINAIS'],
         }
     })
 

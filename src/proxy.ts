@@ -8,7 +8,7 @@ import { decrypt } from './lib/session';
 // protectedRoutes são rotas que necessitam de autenticação para serem acessadas
 // authRoutes são rotas que não necessitam de autenticação para serem acessadas mas que são para autenticação, como login e registro
 const protectedRoutes = ['/admin', '/membro', '/lider', '/aluno']
-const authRoutes = ['/login', '/registro']
+const authRoutes = ['/login', '/cadastro']
 //#endregion
 
 //#region Função de Proxy

@@ -39,10 +39,10 @@ export async function loginAction(prevState: unknown, formData: FormData) {
 }
 //#endregion
 
-
 //#region Logout Action
 export async function logoutAction() {
     await deleteSession();
     redirect('/login');
 }
 //#endregion
+
