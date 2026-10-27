@@ -4,6 +4,7 @@ import MenuAdmEquipe from "./MenuAdmEquipe";
 import { useState } from "react";
 import PerfilModule from "./PerfilModule";
 import ConviteModule from "./ConviteModule";
+import MembrosModule from "./MembrosModule";
 
 interface MenuAdminProps {
     userName: string;
@@ -90,7 +91,7 @@ export default function MenuAdmin({
                 />
             )}
             {membros && (
-                <div className=" flex-9">Membros</div>
+                <MembrosModule />
             )}
             {Convites && (
                 <ConviteModule />
