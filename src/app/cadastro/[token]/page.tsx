@@ -31,7 +31,7 @@ export default async function CadastroConvitePage({ params }: CadastroPageProps)
 
     return (
         <main className="flex min-h-screen items-center justify-center bg-foreground text-background p-5">
-            <RegisterInviteForm token={token} />
+            <RegisterInviteForm token={token} role={invite.role}/>
         </main>
     );
 }

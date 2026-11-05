@@ -43,15 +43,20 @@ export async function toggleInviteStatusAction(id: number, newStatus: boolean) {
 
 export async function registerWithInviteAction(prevState: unknown, formData: FormData) {
     const token = formData.get('token') as string;
+    const role = formData.get('role') as Role | undefined;
     const name = (formData.get('name') as string | null)?.trim();
     const email = (formData.get('email') as string | null)?.trim();
     const password = formData.get('password') as string | null;
 
-    if (!name || !email || !password || !token) {
+    if (!name || !email || !password || !token || !role) {
         return { success: false, message: 'Preencha todos os campos obrigatórios.' };
     }
 
-    const response = await createUser({ name, email, password, token });
+    if (!VALID_ROLES.includes(role)) {
+        return { success: false, message: 'Função inválida!' };
+    }
+
+    const response = await createUser({ name, email, password, token, role });
 
     if (response.isRegistered) {
         redirect('/login');

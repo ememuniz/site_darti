@@ -1,6 +1,7 @@
 //#region Importações
 import { prisma } from '@/lib/prisma';
 import bcrypt from 'bcryptjs';
+import { Role } from '@prisma/client';
 //#endregion
 
 //#region Validação de credenciais
@@ -31,10 +32,11 @@ import bcrypt from 'bcryptjs';
         email: string;
         password: string;
         token: string;
+        role: Role;
     }
 
 
-    export async function createUser({ name, email, password, token }: createUserProps) {
+    export async function createUser({ name, email, password, token, role }: createUserProps) {
         let isRegistered = false;
         try {
             // Verifica se o convite existe, não foi usado e não expirou
@@ -66,6 +68,7 @@ import bcrypt from 'bcryptjs';
                         password: hashedPassword,
                         board: [],
                         club: [],
+                        role,
                     },
                 }),
                 prisma.invite.update({

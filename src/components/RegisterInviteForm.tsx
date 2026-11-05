@@ -3,7 +3,12 @@
 import { useActionState } from 'react';
 import { registerWithInviteAction } from '@/actions/invite.actions';
 
-export default function RegisterInviteForm({ token }: { token: string }) {
+interface RegisterInviteFormProps {
+    token: string;
+    role: string;
+}
+
+export default function RegisterInviteForm({ token, role }: RegisterInviteFormProps) {
     const [state, formAction, isPending] = useActionState(registerWithInviteAction, null);
 
     if (state?.success) {
@@ -24,6 +29,7 @@ export default function RegisterInviteForm({ token }: { token: string }) {
             
             {/* Envia o token de forma oculta junto com o formulário */}
             <input type="hidden" name="token" value={token} />
+            <input type="hidden" name="role" value={role} />
 
             <div className="flex flex-col gap-1">
                 <label className="text-orangeDarti text-sm font-semibold">Nome Completo</label>
