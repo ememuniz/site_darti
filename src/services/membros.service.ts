@@ -23,6 +23,7 @@ export async function getAllMembros() {
                 socialName: socialName,
                 initials: initials,
                 email: user.email,
+                jobTitle: user.jobTitle || 'Sem Cargo',
                 role: user.jobTitle || user.role,
                 isActive: user.isActive,
                 dateOfBirth: user.dateOfBirth ? user.dateOfBirth.toISOString() : null,

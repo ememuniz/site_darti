@@ -5,6 +5,7 @@ import { useState } from "react";
 import PerfilModule from "./PerfilModule";
 import ConviteModule from "./ConviteModule";
 import MembrosModule from "./MembrosModule";
+import CargosModule from "./CargosModule";
 
 interface MenuAdminProps {
     userName: string;
@@ -39,8 +40,8 @@ export default function MenuAdmin({
 }: MenuAdminProps) {
     const [meuPerfil, setMeuPerfil] = useState(false);
     const [membros , setMembros] = useState(false);
-    const [Convites, setConvites] = useState(true);
-    const [cargos, setcargos] = useState(false);
+    const [Convites, setConvites] = useState(false);
+    const [cargos, setcargos] = useState(true);
     const [grupos, setgrupos] = useState(false);
     const [atividades, setatividades] = useState(false);
     const [relatorios, setrelatorios] = useState(false);
@@ -97,7 +98,7 @@ export default function MenuAdmin({
                 <ConviteModule />
             )}
             {cargos && (
-                <div className=" flex-9">Cargos</div>
+                <CargosModule />
             )}
             {grupos && (
                 <div className=" flex-9">Grupos</div>

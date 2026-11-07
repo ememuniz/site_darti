@@ -225,6 +225,12 @@ export default function MembrosModule() {
                 </div>
             </div>
 
+
+
+
+
+
+
             {/* TABELA DE MEMBROS */}
             <div className="bg-darkDarti rounded-[20px] border border-darkDarti/80 shadow-md overflow-hidden">
                 <div className="overflow-x-auto">
@@ -336,6 +342,16 @@ export default function MembrosModule() {
                     </table>
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
 
             {/* MODAL DE PERFIL COMPLETO (POPUP)[cite: 10] */}
             {selectedMembro && (
